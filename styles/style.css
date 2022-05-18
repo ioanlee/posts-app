@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -53,6 +54,10 @@ input, select {
   outline: none;
 }
 
+html {
+  font-family: 'Inter', sans-serif;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,13 +84,24 @@ main .container {
   padding: 40px;
   min-height: 200px;
   border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px;
 }
 
-main .Login {
+.Login {
   background: lightblue;
 }
 
-main .Login-form {
+.Login-form {
   gap: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,7 +115,7 @@ main .Login-form {
           flex-direction: column;
 }
 
-main .Login-form input[type=text] {
+.Login-form input[type=text] {
   width: 200px;
   height: 30px;
   border: 1px solid black;
@@ -107,10 +123,146 @@ main .Login-form input[type=text] {
   border-radius: 15px;
 }
 
-main .Login-form button {
+.Login-form button {
   width: 200px;
   border: 1px solid black;
   min-height: 30px;
   border-radius: 15px;
+}
+
+.Feed {
+  gap: 10px;
+}
+
+.Feed-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.Feed-nav ul li {
+  background: #94f3eb;
+  width: 100%;
+  line-height: 150%;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 15px !important;
+}
+
+.Feed-nav ul li:first-of-type {
+  border-left: 1px solid black;
+  border-radius: 10px 0 0 10px;
+}
+
+.Feed-nav ul li:last-of-type {
+  border-right: 1px solid black;
+  border-radius: 0 10px 10px 0;
+}
+
+.Feed-nav ul li:not(:last-of-type) {
+  border-right: 1px solid black;
+  margin-right: 10px;
+}
+
+.Feed-nav ul li:hover {
+  opacity: .8;
+}
+
+.Feed-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.Feed-profile-button {
+  text-decoration: none;
+  color: #0f98a1;
+}
+
+.Post {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Post-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Post-top-author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.Post-like-button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: 1px;
+  fill: #0f98a1;
+}
+
+.Post-like-button:hover {
+  fill: #94f3eb;
+}
+
+.Post-like-button:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.Post-like-button .s0 {
+  fill: none;
+  stroke: #000000;
+  stroke-linejoin: round;
+  stroke-width: 1s;
+}
+
+.Post-like-button .s0:hover {
+  fill: #0f98a1;
+}
+
+.Post-likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0 4px;
+  font-size: 12px;
+}
+
+.Post-likes .name {
+  text-decoration: none;
+  font-style: italic;
+  color: #0f98a1;
+}
+
+.Post-likes .name:not(:last-of-type)::after {
+  content: ',';
 }
 /*# sourceMappingURL=style.css.map */
